@@ -6,8 +6,8 @@
 </description>
     <link>http://sannystark.github.io/</link>
     <atom:link href="http://sannystark.github.io/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Wed, 23 Dec 2015 14:04:47 +0200</pubDate>
-    <lastBuildDate>Wed, 23 Dec 2015 14:04:47 +0200</lastBuildDate>
+    <pubDate>Wed, 23 Dec 2015 14:14:07 +0200</pubDate>
+    <lastBuildDate>Wed, 23 Dec 2015 14:14:07 +0200</lastBuildDate>
     <generator>Jekyll v3.0.1</generator>
     
       <item>
@@ -442,13 +442,11 @@ Using native methods (like join()), regardless of what’s going on behind the a
 &lt;p&gt;Для более подробной информации прошу на сайт Log4j 2.&lt;/p&gt;
 </description>
         <pubDate>Sun, 12 Jan 2014 12:00:00 +0200</pubDate>
-        <link>http://sannystark.github.io/log4j/java/2014/01/12/log4j-2.html</link>
-        <guid isPermaLink="true">http://sannystark.github.io/log4j/java/2014/01/12/log4j-2.html</guid>
+        <link>http://sannystark.github.io/log4j/2014/01/12/log4j-2.html</link>
+        <guid isPermaLink="true">http://sannystark.github.io/log4j/2014/01/12/log4j-2.html</guid>
         
         
         <category>log4j</category>
-        
-        <category>java</category>
         
       </item>
     
