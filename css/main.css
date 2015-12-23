@@ -148,20 +148,19 @@ pre {
  * Site header
  */
 .site-header {
-  border-top: 5px solid #424242;
   border-bottom: 1px solid #e8e8e8;
   min-height: 56px;
+  background-color: #424242;
   position: relative; }
 
 .site-title {
   font-size: 26px;
   font-weight: 300;
   line-height: 56px;
-  letter-spacing: -1px;
   margin-bottom: 0;
   float: left; }
   .site-title, .site-title:visited {
-    color: #424242; }
+    color: white; }
 
 .site-nav {
   float: right;
@@ -169,7 +168,7 @@ pre {
   .site-nav .menu-icon {
     display: none; }
   .site-nav .page-link {
-    color: #111;
+    color: white;
     line-height: 1.5; }
     .site-nav .page-link:not(:last-child) {
       margin-right: 20px; }
@@ -271,17 +270,29 @@ pre {
 
 .post-list {
   margin-left: 0;
-  list-style: none; }
+  color: black;
+  list-style: none;
+  font-size: 14px !important; }
   .post-list > li {
     margin-bottom: 30px; }
 
 .post-meta {
   font-size: 14px;
-  color: #828282; }
+  color: #828282;
+  border-top: 1px solid #eee;
+  border-bottom: 1px solid #eee;
+  line-height: 2em;
+  display: block;
+  margin-bottom: 12px; }
 
 .post-link {
   display: block;
-  font-size: 24px; }
+  font-size: 24px;
+  color: black; }
+
+.post-link:hover {
+  text-decoration: none;
+  color: #828282; }
 
 /**
  * Posts
@@ -290,7 +301,7 @@ pre {
   margin-bottom: 30px; }
 
 .post-title {
-  font-size: 42px;
+  font-size: 36px;
   letter-spacing: -1px;
   line-height: 1; }
   @media screen and (max-width: 800px) {
@@ -298,7 +309,9 @@ pre {
       font-size: 36px; } }
 
 .post-content {
-  margin-bottom: 30px; }
+  font-size: 14px !important;
+  margin-bottom: 30px;
+  font-family: 'Open Sans', sans-serif; }
   .post-content h2 {
     font-size: 32px; }
     @media screen and (max-width: 800px) {

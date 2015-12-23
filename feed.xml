@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Блог</title>
-    <description>Вписать дескрипшин для поисковиков
+    <title>Блог умелого разработчика</title>
+    <description>Блог о програмировании, алгоритмах, уязвимостях, безисходности и черной материи
 </description>
     <link>http://sannystark.github.io/</link>
     <atom:link href="http://sannystark.github.io/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Wed, 23 Dec 2015 12:04:28 +0200</pubDate>
-    <lastBuildDate>Wed, 23 Dec 2015 12:04:28 +0200</lastBuildDate>
+    <pubDate>Wed, 23 Dec 2015 14:04:47 +0200</pubDate>
+    <lastBuildDate>Wed, 23 Dec 2015 14:04:47 +0200</lastBuildDate>
     <generator>Jekyll v3.0.1</generator>
     
       <item>
@@ -93,90 +93,6 @@ http://www.example.com/someApp/javax.faces.resource./WEB-INF/web.xml.jsf?ln=..
         <category>java</category>
         
         <category>jsf</category>
-        
-      </item>
-    
-      <item>
-        <title>Пару дефектов(багов) в JSF 2.0 - 2.1.18</title>
-        <description>&lt;p&gt;После очередного сканирования сервиса на проникновения, наткнулся на очень инетрессную уязвимость в JSF 2.1 связанную с доступом к ресурсам через http без авторизации.&lt;/p&gt;
-
-&lt;!--more--&gt;
-&lt;p&gt;&lt;img src=&quot;http://www.onstagetechnologies.com/wp-content/uploads/2012/02/bug.jpg&quot; alt=&quot;enter image description here&quot; /&gt;&lt;/p&gt;
-
-&lt;p&gt;JSF2 - MVC web-фреймворк позволяющий с легкостью создавать простые(сложные) web-ориентированные приложения за меньшее количество времени и усилий. Другим словами это набор интерфейсов и спецификаций:&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;JSF 2.1 - JSR 314&lt;/li&gt;
-  &lt;li&gt;JSF 2.2 - JSR 344&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;&lt;strong&gt;Mojarra&lt;/strong&gt; - это оракловская имплементация этих стандартов.
-Её(mojarra) поддерживают такие сервера как :&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;Glassfish&lt;/li&gt;
-  &lt;li&gt;JBoss&lt;/li&gt;
-  &lt;li&gt;WebLogic&lt;/li&gt;
-  &lt;li&gt;Apache Tomcat&lt;/li&gt;
-  &lt;li&gt;…&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;Наши злобные дефекты содержатся как раз в имплементации JSF 2.0 - 2.1.18 (JSR 314) версий.&lt;/p&gt;
-
-&lt;hr /&gt;
-
-&lt;h3 id=&quot;resource-identifier&quot;&gt;Дефект 1: Обходной путь через Resource Identifier&lt;/h3&gt;
-
-&lt;p&gt;Один из дефектов связанный с обработкой идентификатора ресурсов(resource identifier). Mojarra не проверяет имя ресурса начинающегося ../ таким разделителем. Конечно это дефект ограничен, мы не можем попаcть в корень нашего приложения или файловой системы сервера, но можем спокойно гулять по папке WEB-INF.
-&lt;code class=&quot;highlighter-rouge&quot;&gt;
-http://www.example.com/someApp/javax.faces.resource.../WEB-INF/web.xml.jsf
-&lt;/code&gt;&lt;/p&gt;
-
-&lt;h3 id=&quot;library-name&quot;&gt;Дефект 2: Обходной путь через Library Name&lt;/h3&gt;
-
-&lt;p&gt;Второй способ связан с обработкой имени библиотеки. Mojarra не проверяет имена библиотек с разделителем .. . Дефект так же ограничен как и первый по свободе доступа.
-&lt;code class=&quot;highlighter-rouge&quot;&gt;
-http://www.example.com/someApp/javax.faces.resource./WEB-INF/web.xml.jsf?ln=..
-&lt;/code&gt;&lt;/p&gt;
-
-&lt;h3 id=&quot;section&quot;&gt;Пути решения&lt;/h3&gt;
-
-&lt;p&gt;Первый, и самый простой, запретить обработчику ресурсов отдавать файлы с определёнными суффиксами расширения. По умолчанию у обработчика ресурсов уже есть ряд исключительных суффиксов.&lt;/p&gt;
-
-&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-java&quot; data-lang=&quot;java&quot;&gt;&lt;span class=&quot;kd&quot;&gt;public&lt;/span&gt; &lt;span class=&quot;kd&quot;&gt;class&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;ResourceHandler&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
-    &lt;span class=&quot;o&quot;&gt;...&lt;/span&gt;
-    
-    &lt;span class=&quot;kd&quot;&gt;public&lt;/span&gt; &lt;span class=&quot;kd&quot;&gt;static&lt;/span&gt; &lt;span class=&quot;kd&quot;&gt;final&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;java&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;lang&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;String&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;RESOURCE_EXCLUDES_DEFAULT_VALUE&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&quot;.class .jsp .jspx .properties .xhtml .groovy&quot;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;;&lt;/span&gt;
-
-    &lt;span class=&quot;o&quot;&gt;...&lt;/span&gt;
-
-&lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
-
-&lt;p&gt;Мы лишь расширим этот список в файле дескриптора web приложения :&lt;/p&gt;
-
-&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-xml&quot; data-lang=&quot;xml&quot;&gt;&lt;span class=&quot;nt&quot;&gt;&amp;lt;context-param&amp;gt;&lt;/span&gt;
-    &lt;span class=&quot;nt&quot;&gt;&amp;lt;param-name&amp;gt;&lt;/span&gt;javax.faces.RESOURCE_EXCLUDES&lt;span class=&quot;nt&quot;&gt;&amp;lt;/param-name&amp;gt;&lt;/span&gt;
-    &lt;span class=&quot;nt&quot;&gt;&amp;lt;param-value&amp;gt;&lt;/span&gt;
-        .class .jsp .jspx .properties .xhtml .groovy .jsf .xml
-    &lt;span class=&quot;nt&quot;&gt;&amp;lt;/param-value&amp;gt;&lt;/span&gt;
-&lt;span class=&quot;nt&quot;&gt;&amp;lt;/context-param&amp;gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
-
-&lt;p&gt;Ну а второй способ, обновиться до более новой версии 2.1.19&lt;/p&gt;
-
-&lt;hr /&gt;
-&lt;p&gt;Ресурсы :&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;&lt;a href=&quot;http://mvnrepository.com/artifact/com.sun.faces/jsf-impl&quot;&gt;http://mvnrepository.com/artifact/com.sun.faces/jsf-impl&lt;/a&gt; - версии jsf имплементаций для скачивания.&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;https://bugzilla.redhat.com/show_bug.cgi?id=CVE-2013-3827&quot;&gt;https://bugzilla.redhat.com/show_bug.cgi?id=CVE-2013-3827&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-</description>
-        <pubDate>Sat, 01 Mar 2014 13:00:42 +0200</pubDate>
-        <link>http://sannystark.github.io/javascript/2014/03/01/bug-jsf2-1.html</link>
-        <guid isPermaLink="true">http://sannystark.github.io/javascript/2014/03/01/bug-jsf2-1.html</guid>
-        
-        
-        <category>javascript</category>
         
       </item>
     
