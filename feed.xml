@@ -6,9 +6,38 @@
 </description>
     <link>http://sannystark.github.io/</link>
     <atom:link href="http://sannystark.github.io/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Sun, 10 Jan 2016 02:52:30 +0200</pubDate>
-    <lastBuildDate>Sun, 10 Jan 2016 02:52:30 +0200</lastBuildDate>
+    <pubDate>Sat, 23 Jan 2016 12:43:38 +0200</pubDate>
+    <lastBuildDate>Sat, 23 Jan 2016 12:43:38 +0200</lastBuildDate>
     <generator>Jekyll v3.0.1</generator>
+    
+      <item>
+        <title>Размышления о развитии вычислительной техники</title>
+        <description>&lt;p&gt;Читая замечательную книгу по архитектуре операционных систем Эндрю Таненбаума, наткнулся ни интересную мысль, которой хочу с вами поделиться и подискутировать дорогие читатели.&lt;/p&gt;
+
+&lt;!--more--&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;После успеха систем CTSS Массачусетсский технологический институт, исследовательский лаборатории Bell Labs и корпорация General Electric, решили начать разработку «компьютерного приложения» - машины, которая должна поддерживать одновременную работу сотен пользователей в режиме разделения времени. Образцом для новой машины послужила система распределения электроэнергии. Когда вам нужна электроэнергия, вы просто вставляете вилку в розетку и получаете энергии столько, сколько вам нужно.&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;Очень интересный подход : “Когда вам нужна электроэнергия, вы просто вставляете вилку в розетку и получаете энергии столько, сколько вам нужно.” В 3-ем поколении развития ЭВМ, машины еще не стали персональными, так как до сих пор были довольно велики и дорогостоящими. “И вместо того что бы хранить библиотеку дома, книжное хранилище сделали общественными, где каждый по желанию и за минимальные(доступные) средства мог взять книгу в аренду, прочитать и вернуть. Так как в основном книги простаивают в библиотеке 80 процентов своего времени.” Эту аналогию я привел для того что бы лучше отследить процесс перехода к разделяемым ресурсам. Возьму на себя смелость сделать поспешный вывод исходя из истории развития ЭВМ :&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Допустим компьютерная технология X развивается, и на своем этапе развития она занимает большие физические объемы и целевое предназначение ее пока нечетко определено (или узко определено). Плюс, полезную работу она выполняет только 20-30 % за все время жизни, в остальном она просто бездействует. Поэтому этот ресурс простоя, можно попытаться задействовать разделив нагрузку между несколькими участниками. То есть создать очередь запросов(заданий, указаний), которые непрерывно будут взаимодействовать с Х. А наполняться эта очередь сможет или прямым взаимодействием с X, или через посредника, который будет доставлять эти задания к X. После наступает этап развития X, путем увеличение быстродействия и уменьшения физических размеров. Этот этап можно назвать, этапом минификации и персонализации. Нет необходимости идти к X или общаться с посредником. Х стал настолько мал и вместителен, что может находиться у каждого дома. После X усложняется максимально вертикально, и достигает своего предела. Одного X уже не достаточно. После происходит компоновка n * X = F . Это опять увеличивает размер и стоимость. Потребности для применения F станут очень узкими и пока до конца не определены.  F простаивает 70-80 % времени. Спрос на такие мощности пока не велик, но со временем он будет расти и цепочка развития замкнется.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Сейчас происходит этап виртуализации, где применяется все тот же подход, подключи провод в розетку, и у тебя дома все мощности гугла. Следующим этапом, следуя из приведенной теории, будет минификация и наличие таких мощностей у нас дома, в мобильных устройствах и т.д. Устройствах в которых будет множество ядер, и гекса-байты памяти. Но в какой то момент мы упремся в предел по количеству ядер и по плотности записи информации. И начнем придумывать новые решения, которые будут занимать большие пространства, и узкую специализацию. Может быть это будут квантовые вычислительные устройства, может быть эти устройства вовсе и не будут вычислять, а уже выдавать ответы. Может быть мы вернемся обратно, и найдем способ повысить тактовую частоту процессора путем использования &lt;a href=&quot;http://hitech.newsru.com/article/10dec2012/nanophotonic&quot;&gt;света&lt;/a&gt; вместо электричества.&lt;/p&gt;
+
+&lt;p&gt;Интересно будет услышать ваши мысли и идеи.&lt;/p&gt;
+</description>
+        <pubDate>Wed, 20 Jan 2016 14:00:00 +0200</pubDate>
+        <link>http://sannystark.github.io/computer/2016/01/20/things-about-future-of-computer.html</link>
+        <guid isPermaLink="true">http://sannystark.github.io/computer/2016/01/20/things-about-future-of-computer.html</guid>
+        
+        
+        <category>computer</category>
+        
+      </item>
     
       <item>
         <title>Anatomy of a Program in Memory [Перевод]</title>
@@ -145,9 +174,12 @@
 
 &lt;p&gt;&lt;br /&gt;&lt;/p&gt;
 
-&lt;p&gt;Как мы знаем, процессор работает с машинными словами, минимальным количеством бит, которое он может обработать за раз. Размерность машинного слова зависит от архитектуры компьютера. Самые известные из них это 32-битные и 64-битные архитектуры. Это говорит нам о том, что: 
-- процессор имеет размерность машинного слова 32/64 бита, то есть за одно действие он может обработать 32/64 бита соответственно 
-- адресное пространство, которым процессор может оперировать, составляет в первом случае 2^32 степени бит, а во втором - 2^64 степени бит.&lt;/p&gt;
+&lt;p&gt;Как мы знаем, процессор работает с машинными словами, минимальным количеством бит, которое он может обработать за раз. Размерность машинного слова зависит от архитектуры компьютера. Самые известные из них это 32-битные и 64-битные архитектуры. Это говорит нам о том, что:&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;процессор имеет размерность машинного слова 32/64 бита, то есть за одно действие он может обработать 32/64 бита соответственно&lt;/li&gt;
+  &lt;li&gt;адресное пространство, которым процессор может оперировать, составляет в первом случае 2^32 степени бит, а во втором - 2^64 степени бит.&lt;/li&gt;
+&lt;/ul&gt;
 
 &lt;h3 id=&quot;section-2&quot;&gt;Проблема с 32 битной архитектурой&lt;/h3&gt;
 
@@ -933,110 +965,6 @@ Using native methods (like join()), regardless of what’s going on behind the a
         
         
         <category>javascript</category>
-        
-      </item>
-    
-      <item>
-        <title>SynchronizedMap, ConcurrentHashMap и многопоточность</title>
-        <description>&lt;p&gt;В сегодняшнем посте, я хочу рассказать как работают synchronizeHashMap и ConcurrentHashMap. Как они ведут себя в &lt;strong&gt;многопоточный&lt;/strong&gt; среде и в чём их главное отличие.&lt;/p&gt;
-
-&lt;!--more--&gt;
-
-&lt;p&gt;Начнём из далека. Что такое &lt;strong&gt;HashMap&lt;/strong&gt; - это key/value хранилище с особой структурой хранения данных. Ключевое слово здесь Hash(Hashing). Hashing - это процесс вычисления hash-функции ключа записываемого значения. Именно по этому параметру, значение кладется в определённой место в hashTable называемое hash bucket.&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&quot;http://anbuwrites.files.wordpress.com/2010/09/image003.jpg&quot; alt=&quot;enter image description here&quot; /&gt;&lt;/p&gt;
-
-&lt;p&gt;Слева от 0 до 6, это так называемые hash buckets. Допустим, мы хотим добавить значение в нашу HashMap - put(‘PIG’,29). Первое что происходит, это вычисление hash по ключу. После это значение пропускатеся через фильтр (остаток от деления по модулю 6 в данном примере). Это необходимо для нахождения определённого hash bucket-а(3). Ключ и значение преобразуются в определённую структуру (Entry).&lt;/p&gt;
-
-&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-java&quot; data-lang=&quot;java&quot;&gt;&lt;span class=&quot;kd&quot;&gt;static&lt;/span&gt; &lt;span class=&quot;kd&quot;&gt;class&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;Entry&lt;/span&gt; &lt;span class=&quot;kd&quot;&gt;implements&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;Map&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;Entry&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
-        &lt;span class=&quot;kd&quot;&gt;final&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;K&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;key&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;;&lt;/span&gt;
-        &lt;span class=&quot;n&quot;&gt;V&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;value&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;;&lt;/span&gt;
-        &lt;span class=&quot;n&quot;&gt;Entry&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;next&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;;&lt;/span&gt;
-        &lt;span class=&quot;kd&quot;&gt;final&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;int&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;hash&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;;&lt;/span&gt;
-        &lt;span class=&quot;o&quot;&gt;...&lt;/span&gt;&lt;span class=&quot;c1&quot;&gt;//More code goes here&lt;/span&gt;
-&lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
-
-&lt;p&gt;И добавляются в коллекцию, подобную LinkedList.&lt;/p&gt;
-
-&lt;p&gt;По простому HashMap - это массив hash-bucket-ов, которые хранят в себе данные в структуре связанного списка.&lt;/p&gt;
-
-&lt;p&gt;&lt;strong&gt;Synchronized Map&lt;/strong&gt; - это потокобезопасная коллекция данных основанная на взаимоблокировках. Что это нам говорит? Все методы, связанные с добавлением/удалением данных, синхронизированы, и для получения значения из одного потока нам необходимо ждать, пока другой поток завершит работу с Map-ой. Разновидностью синхронизированной мапы является HashTable (JDK 1.0).&lt;/p&gt;
-
-&lt;p&gt;Для небольшого количества потоков, или где необходимо обезопасить свои данные в конкуретной среде потоков, это работает более менее приемлемо. Но когда необходимо использовать Map в хаотическом мире многопоточного программирования, на сцену выходит ConcurrentHashMap.&lt;/p&gt;
-
-&lt;p&gt;&lt;strong&gt;ConcurrentHashMap&lt;/strong&gt; - это тот же HashMap, но рассчитан для работы в многопоточной среде. Главным отличием является то, что ему не нужно иметь синхронизированные блоки данных для доступа или записи информации. То есть ему ненужно блокировать самого себя для других потоков. Но как же тогда он корректно работает в многопоточной среде ? и какие требования выдвигались со стороны разработчиков?&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;Потокобезопасность&lt;/li&gt;
-  &lt;li&gt;Отсутствие блокировок всей таблицы во время доступа к ней&lt;/li&gt;
-  &lt;li&gt;Желательно, чтобы отсутствовали блокировки таблицы при выполнении операции чтения&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;В ConcurrentHashMap был введен новый слой абстракции, называемый сегментами (Segment). Другими слова Segment - это массив хэш-таблиц (концептуально).&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&quot;http://howtodoinjava.com/wp-content/uploads/ConcurrentHashMap1.jpg?cb170b&quot; alt=&quot;enter image description here&quot; /&gt;&lt;/p&gt;
-
-&lt;p&gt;ConcurrentHashMap делиться на сегменты (по умолчанию 16) при инициализации. Именно сегменты нам позволяют использовать нашу Map-у, множеством потоков без блокирования всего объекта. Другими словами, когда один поток занят пятым сегментом, 15 сегментов свободны для взаимодействия с другими потоками. То есть, происходит блокировка только одного сегмента, а не целого объекта.&lt;/p&gt;
-
-&lt;p&gt;Ниже приведена таблица тестов HashTable и ConcurrentHashMap в многопоточной среде.&lt;/p&gt;
-
-&lt;table&gt;
-  &lt;thead&gt;
-    &lt;tr&gt;
-      &lt;th style=&quot;text-align: left&quot;&gt;Threads&lt;/th&gt;
-      &lt;th style=&quot;text-align: left&quot;&gt;ConcurrentHashMap&lt;/th&gt;
-      &lt;th style=&quot;text-align: left&quot;&gt;Hashtable&lt;/th&gt;
-    &lt;/tr&gt;
-  &lt;/thead&gt;
-  &lt;tbody&gt;
-    &lt;tr&gt;
-      &lt;td style=&quot;text-align: left&quot;&gt;1&lt;/td&gt;
-      &lt;td style=&quot;text-align: left&quot;&gt;1.00&lt;/td&gt;
-      &lt;td style=&quot;text-align: left&quot;&gt;1.03&lt;/td&gt;
-    &lt;/tr&gt;
-    &lt;tr&gt;
-      &lt;td style=&quot;text-align: left&quot;&gt;2&lt;/td&gt;
-      &lt;td style=&quot;text-align: left&quot;&gt;2.59&lt;/td&gt;
-      &lt;td style=&quot;text-align: left&quot;&gt;32.40&lt;/td&gt;
-    &lt;/tr&gt;
-    &lt;tr&gt;
-      &lt;td style=&quot;text-align: left&quot;&gt;4&lt;/td&gt;
-      &lt;td style=&quot;text-align: left&quot;&gt;5.58&lt;/td&gt;
-      &lt;td style=&quot;text-align: left&quot;&gt;78.23&lt;/td&gt;
-    &lt;/tr&gt;
-    &lt;tr&gt;
-      &lt;td style=&quot;text-align: left&quot;&gt;8&lt;/td&gt;
-      &lt;td style=&quot;text-align: left&quot;&gt;13.21&lt;/td&gt;
-      &lt;td style=&quot;text-align: left&quot;&gt;163.48&lt;/td&gt;
-    &lt;/tr&gt;
-    &lt;tr&gt;
-      &lt;td style=&quot;text-align: left&quot;&gt;16&lt;/td&gt;
-      &lt;td style=&quot;text-align: left&quot;&gt;27.58&lt;/td&gt;
-      &lt;td style=&quot;text-align: left&quot;&gt;341.21&lt;/td&gt;
-    &lt;/tr&gt;
-    &lt;tr&gt;
-      &lt;td style=&quot;text-align: left&quot;&gt;32&lt;/td&gt;
-      &lt;td style=&quot;text-align: left&quot;&gt;57.27&lt;/td&gt;
-      &lt;td style=&quot;text-align: left&quot;&gt;778.41&lt;/td&gt;
-    &lt;/tr&gt;
-  &lt;/tbody&gt;
-&lt;/table&gt;
-
-&lt;p&gt;&lt;a href=&quot;http://www.ibm.com/developerworks/java/library/j-jtp07233/index.html&quot;&gt;источник&lt;/a&gt;&lt;/p&gt;
-
-&lt;hr /&gt;
-
-&lt;p&gt;В этой статье я только поверхностно коснулся ConcurrentHashMap и synchronized Map.
-Для более глубокого понимания прошу вас в мир документации Java - &lt;a href=&quot;http://docs.oracle.com/javase/7/docs/api/&quot;&gt;http://docs.oracle.com/javase/7/docs/api/&lt;/a&gt;&lt;/p&gt;
-</description>
-        <pubDate>Mon, 17 Feb 2014 12:00:00 +0200</pubDate>
-        <link>http://sannystark.github.io/concurrency/java/2014/02/17/concurrncy-java-sync.html</link>
-        <guid isPermaLink="true">http://sannystark.github.io/concurrency/java/2014/02/17/concurrncy-java-sync.html</guid>
-        
-        
-        <category>concurrency</category>
-        
-        <category>java</category>
         
       </item>
     
